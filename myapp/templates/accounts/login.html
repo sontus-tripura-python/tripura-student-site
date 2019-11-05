@@ -1,0 +1,55 @@
+{% extends 'blog/base.html' %}
+
+{% load crispy_forms_tags %}
+
+
+{% block body %}
+<div class="container">
+<div class="form-wrapper">
+<div class="headerform">
+<h4 class="logoLEft">Tirpura Student's Forum</h4>
+</div>
+<div class="ligIn-interface">
+  <form class="form-group" method="post">
+    <div class="formstylye">
+      {% csrf_token  %}
+      {{ form|crispy }}
+    </div>
+
+    <div class="">
+      <button type="btn btn-success" class="SubmitBtn" Name="submit" value="Submit">LOG IN</button>
+    </div>
+
+  </form>
+
+
+
+
+</div>
+<div class="footerForm">
+<p class="InfoWant">Do You need Account ? Click Create Account button.</p>
+<h4 class="linkacc"><a href="{% url 'register' %}">Create Account</a></h4>
+<h4 style="text-align:center;"><a href="">Forgotten Password ?</a></h4>
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8 formstyle">
+
+
+    </div>
+  </div>
+
+
+
+</div>
+
+
+{% endblock %}
