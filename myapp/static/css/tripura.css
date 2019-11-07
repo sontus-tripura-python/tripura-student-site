@@ -1,0 +1,520 @@
+*{margin:0;
+ padding:0;
+ }
+body{
+	font-family:sans-sarif, arial !important;
+	font-size:16px;
+	line-height:25px;
+}
+/*-------------- logo --------*/
+.bgheader{
+	background:#539677;
+	box-shadow:2px 4px 6px 6px #333d42;
+	border-radius:10px;
+}
+.logo{
+	padding:10px 20px;
+}
+.logo img{
+	height:100px;
+	width:100px;
+	border-radius:50%;
+}
+.logotext{
+	
+	padding:10px 50px;
+}
+.logotext h2{
+	text-shadow:-6px 5px 2px #362e42;
+    font-size: 25px;
+    font-style: italic;
+    color: #fff;
+    padding-top: 15px;
+    
+}
+.logotext p{
+	color:#ddd;
+	text-transform:uppercase;
+}
+.logotext span{
+	color:#51ff58;
+}
+.section-header {
+	
+	padding-top:50px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.section-header .title {
+	font-size:25px;
+	color:#000;
+	font-style:italic;
+	letter-spacing:2px;
+    text-transform:uppercase;
+	font-family:font-family: 'Kumar One Outline', cursive !important;
+	
+}
+.title:after {
+    content:"";
+  	display:block;
+  	height:2px;
+  	width:200px;
+  	background-color:#151b54;
+    margin-top:10px;
+	border-radius:20px;
+	
+}
+
+.text-center .title:after {
+    margin: 10px auto 0px;
+}
+/*-------- social icon css-----*/
+.social-area{
+	padding:10px 0px;
+	z-index:1;
+	position:fixed;
+	right:0;
+	top:40%;
+	
+}
+.social-area li{
+	list-style:none;
+	
+}
+.fab {
+ padding:10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fab:hover {
+    opacity: 0.7;
+}
+
+.fb {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.googlePlus {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkIN {
+  background: #007bb5;
+  color: white;
+}
+
+.Youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.instgrm{
+  background:#E4405F;
+  color: white;
+}
+/*-------------- navbar section --------*/
+#navbarsection{
+	border-top:1px solid #1c1d1f;
+	border-bottom:1px solid #1c1d1f;
+	z-index:999;
+}
+.navbar{
+	background:#164a3b!important;
+}
+
+.navbar ul li{
+	padding-right:20px;
+	margin-right:10px;
+}
+.navbar ul li a{
+	text-transform:uppercase;
+	letter-spacing:2px;
+	color:#fff !important;
+	transition:1s;
+}
+.navbar ul li a:hover{
+	color:green!important;
+	transition:1s;
+}
+.dropdown-menu{
+	background:#202542!important;
+}
+.dropdown-menu a{
+	background:#202542!important;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/*------------ slider section 
+#slidersection{
+	position:relative;
+	min-height:500px;
+	background:#2ca095;
+}
+
+#slidersection:before{
+	content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -75px;
+    width: 50%;
+    height: 100px;
+    	 background:
+ linear-gradient(to bottom, rgba(59,183,120,1) 0%,#3B5998 100%);
+    transform: skewY(-4deg);
+}
+#slidersection:after{
+	    content: "";
+    position: absolute;
+    right: 50%;
+    bottom: -75px;
+    width: 50%;
+    height: 100px;
+    	 background:
+ linear-gradient(to bottom, rgba(59,183,120,1) 0%,#3B5998 100%);
+    
+    transform: skewY(4deg);
+}
+.sliderimg{
+	margin-top:20px;
+	width:100%;
+	height:200px;
+}
+----------*/
+.carousel-indicators li{
+	width:10px;
+	height:10px;
+	border-radius:50%;
+}
+#slidersection{
+	position:relative;
+	max-height:600px;
+	background:#2ca095;
+}
+.slider_img{
+	height:550px;
+}
+.carousel-inner{
+	height:600px;
+}
+/*------------------profile section--------*/
+#divsecton{
+	 background:
+ linear-gradient(to bottom, rgba(59,183,120,1) 0%,#3B5998 100%);
+    box-shadow: 5px 5px 5px #888888;
+	margin-top:20px;
+	padding:20px;
+	min-height:200px;
+	position:relative
+}
+.service{
+	margin-top:20px;
+	 text-align: center;
+    padding: 20px 30px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px 4px #1b1e1f;
+    transition: 3s;
+    position: relative;
+    overflow: hidden;
+}
+.item{
+	box-shadow:0px 5px 20px #000;
+		padding:20px 30px;
+	border:1px solid #fff;
+	text-decoration:none;
+	text-transform:uppercase;
+	color:#fff;
+	border-radius:5px;
+	text-align:center;
+	transition:2s;
+}
+.item a{
+	
+	text-decoration:none;
+    color:#fff;
+}
+.item:hover{
+	border:1px solid #000;
+	transition:2s;
+	background:#eee;
+	color:#000;
+}
+.item:hover a{
+	color:#000;
+	transition:1s;
+    font-weight:500;
+}
+/*----------- student class section----------*/
+#studentsecion{
+	 background:
+ linear-gradient(to bottom, rgba(59,183,120,1) 0%,#3B5998 100%);
+    box-shadow: 5px 5px 5px #888888;
+	min-height:500px;
+	position:relative;
+	/*background:#70ad70;*/
+}
+#newsarchive{}
+
+.class-section{
+	margin-bottom:20px;
+	text-align:center;
+	min-height:280px;
+	width:300px;
+	background:#fff;
+	border-radius:5px;
+	box-shadow:10px 10px 5px #000;
+	text-transform:uppercase;
+}
+.class{
+	padding-top:50px;
+}
+.class-section img{
+	width:150px;
+	height:100px;
+	padding-top:20px;
+}
+.counterNum{
+	padding-top:50px;
+}
+.studentNumber{
+	
+	margin-top:20px;
+	width:100%;
+	height:2px;
+	background:#000;
+	
+}
+.class-section h3{
+	margin-top:10px;
+}
+.class-section a{
+	letter-spacing:2px;
+	font-size:20px;
+	color:#000;
+	text-transform:uppercase;
+}
+/*----------- latest news section css*/
+#latestNEws{
+	min-height:500px;
+	background:#234150;
+	position:relative;
+	margin-top:100px;
+	
+}
+#latestNEws:before{
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0%;
+    width: 50%;
+    height: 90px;
+    transform: skewY(7deg);
+    background: #234150;
+	border-radius:10px 0 0 0;
+	z-index:-1;
+}
+#latestNEws:after{
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: 0%;
+    width: 50%;
+    height: 90px;
+    transform: skewY(-7deg);
+    background: #234150;
+	border-radius:0 0 10px 0;
+	z-index:-1;
+}
+.newsbox{
+    box-shadow: 5px 5px 5px #888888;
+	width:300px;
+	height:150px;
+	border:1px solid #fff;
+	margin-bottom:10px;
+	text-align:center;
+	
+}
+.newsbox img{
+	width:300px;
+}
+.newsdescribe{
+	padding:20px;
+	
+}
+#linkNews{
+	font-size:25px;
+	color:#fff !important;
+}
+/*---------- newsarchive-----*/
+#newsarchive{
+	background:#947f7f;
+	min-height:200px;
+}
+/*--------- footer section----------*/
+#footersection{
+	margin-top:10px;
+	background:#000;
+	min-height:300px;
+}
+
+.rightfooter{
+	color:#fff;
+	padding:20px 10px;
+}
+.rightfooter ul li{
+	list-style:none;
+}
+.copyright{
+	color:#fff!important;
+	font-size:16px;
+	text-transform:uppercase;
+	
+}
+.copyright:hover{
+	color:red !important;
+}
+
+/*-------- form section------*/
+
+ 
+ 
+ 
+ 
+/*-------- contact section------*/
+.contactbg{
+	margin-top:20px;
+	background:#adaaaa;
+	min-height:500px;
+}
+.ContactTitle{
+	padding-top:20px;
+	text-align: center;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+.ContactTitle:after{
+	content:'';
+	display:block;
+	height:2px;
+	width:150px;
+	margin:10px auto;
+	background:#000;
+}
+
+#sendbtn{
+	width:100%;
+	height:50px;
+	letter-spacing:3px;
+	padding:10px;
+	background:green !important;
+	transition:.5s;
+	border-radius:10px;
+	
+}
+#sendbtn:hover{
+	background:#fff !important;
+	color:#000;
+	transition:.5s;
+}
+#contactaddress{
+	background:#294830;
+	min-height:200px;
+}	
+.address{
+	color:#fff;
+	text-align:center;
+}
+.address .fa{
+	margin-top:10px;
+	margin-bottom:10px;
+	font-size:20px;
+	padding:10px;
+	width:40px;
+	height:40px;
+	border:1px solid #fff;
+   	color:blue;
+}
+.address p{
+	margin:0;
+	padding:0;
+}
+/*---------- leadership -------*/
+#main-leader{
+		margin-top:20px;
+	
+}
+.teamBg{
+	padding:20px;
+	min-height:600px;
+	background:#20c997;
+}
+.leaderTItle{
+	text-align:center;
+	margin:0;
+	padding-top:10px;
+	text-transform:uppercase;
+	
+}
+.subtitle{
+	text-align:center;
+	margin:0;
+	padding:0;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+.subtitle:after{
+	content:'';
+	background:#000;
+	display:block;
+	height:2px;
+	width:120px;
+	margin:5px auto;
+}
+.team-items{
+	min-height:380px;
+	margin-right:10px;
+	padding:10px;
+	background:#e1e8ef;
+	border-radius:5px;
+}
+.team-info{
+	color:#222;
+	font-size:20px;
+	text-align:center;
+}
+.team-info h2,p{
+	margin:0;
+	padding:0;
+}
+.team-info p{
+	color:red;
+}
+.team-details{
+	background:green;
+}
+.social-icons{
+	align-items:center;
+}
+.social-icons li{
+	padding:0;
+	float:left;
+	list-style:none;
+	}
+
+..class-sectio------- events section--------*/
+/*-------- footer section-------*/

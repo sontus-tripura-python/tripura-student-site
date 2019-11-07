@@ -52,28 +52,6 @@ class ProfileUpdateForm(forms.ModelForm):
         'current_city',
         'local_city',
         'bio_data',
-        ]
-
-class ProfileCreateForm(forms.ModelForm):
-    class Meta:
-        model = profile
-        fields = [
-        'photo',
-        'title',
-        'fathername',
-        'mothername',
-        'School',
-        'college',
-        'university',
-        'deparment',
-        'phone',
-        'birthdate',
-        'Village',
-        'thana',
-        'district',
-        'current_city',
-        'local_city',
-        'bio_data',
-
-
+        'religion',
+        'Class',
         ]
