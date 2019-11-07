@@ -23,19 +23,40 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
+          {% if user.is_authenticated %}
           <li class="nav-item active">
-            <a class="nav-link" href="{% url 'home' %}">PROFILE <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{% url 'profile' %}">PROFILE <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'login' %}"> LOGIN</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'edit_profile' %}">EDIT PROFILE <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'Profile_create' %}">CREATE PROFILE</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'accoount_update' %}">UPDATE ACCOUNT</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'logout'%}">LOGOUT</a>
           </li>
+          <li class="nav-item dropdown">
+     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       YOUR ACCOUNT
+     </a>
+     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+       <a class="dropdown-item" href="#">account</a>
+       <a class="dropdown-item" href="#">Another action</a>
+       <a class="dropdown-item" href="#">Something else here</a>
+     </div>
+   </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}"> LOGIN</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'register'%}">Register</a>
           </li>
-
+          {% endif %}
         </ul>
 
       </div>

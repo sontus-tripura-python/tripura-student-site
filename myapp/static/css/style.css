@@ -20,6 +20,9 @@ a:hover{
 	text-transform:uppercase;
 	color:#fff !important;
 }
+.dropdown{
+  background: #133861;
+}
 .edit-option{
 	margin-left:80px;
 }
@@ -48,15 +51,13 @@ a:hover{
 label{
 	margin-top:5px;
 	font-size:20px;
+  text-transform: italic;
 	font-weight:bold;
 }
 .ligIn-interface{
 
 	background:#ccc;
 	min-height:280px;
-}
-.form-control{
-	box-shadow:2px 3px 2px #000;
 }
 .ligIn-form{
 	margin:0 auto;
@@ -101,16 +102,21 @@ label{
 }
 .textinput {
   padding: 5px;
-  padding-left: 5px;
-  width: 400px;
   box-shadow:2px 3px 2px #000;
-}
-.formstylye{
-  padding-left: 50px;
 }
 .emailinput{
   padding: 5px;
-  padding-left: 5px;
-  min-width: 400px;
   box-shadow:2px 3px 2px #000;
+}
+/*-------- profile------*/
+.bio-data{
+  min-width: 300px;
+  padding: 5px;
+  min-height:200px;
+  border: 1px solid #000;
+  background: #e7e7ef;
+}
+.profilephoto{
+  height: 200px;
+  width: 200px;
 }

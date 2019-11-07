@@ -1,13 +1,35 @@
 {% extends 'blog/base.html' %}
 
-
-
-
 {% block body %}
 <div class="container">
-  <p>home section </p>
-  <h2>Iam from home.html</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <img src="{{ request.user.profile.photo.url }}" alt="" class=" rounded-circle profilephoto">
+    <h4>{{ user.first_name }} <span class="lastname">{{ user.last_name }}</span> </h4>
+    <p>{{ user.profile.title }}</p>
+    <h4>Email : {{ user.email }}</h4>
+    <h4>Father Name : {{ user.profile.fathername }}</h4>
+    <h4>Mother Name : {{ user.profile.mothername }}</h4>
+    <h4>School : {{ user.profile.School}}</h4>
+    <h4>college : {{ user.profile.college }}</h4>
+    <h4> University : {{ user.profile.university }}</h4>
+      <h4>Deparment : {{ user.profile.deparment }}</h4>
+      <h4>Village : {{ user.profile.Village }}</h4>
+      <h4>Live : {{ user.profile.current_city }}</h4>
+      <h4>City : {{ user.profile.local_city }}</h4>
+      <h4>Thana : {{ user.profile.thana }}</h4>
+      <h4>District : {{ user.profile.district }}</h4>
+      <h4>Phone : {{ user.profile.phone }}</h4>
+      <h4>Birthdate : {{ user.profile.birthdate }}</h4>
+        <div class="bio-data">
+          <p>Bio : {{ user.profile.bio_data }}</p>
+        </div>
 
+
+
+    </div>
+
+  </div>
 </div>
 
 
