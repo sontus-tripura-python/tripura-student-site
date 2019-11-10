@@ -11,12 +11,7 @@ a:hover{
 .headersection{
   background: #133861;
 }
-.navbar-brand{
-	color:#fff !important;
-	margin-right:50px;
-	padding-right:50px;
-}
-.navbar-nav li a{
+.navbarNav li a{
 	text-transform:uppercase;
 	color:#fff !important;
 }
@@ -117,6 +112,65 @@ label{
   background: #e7e7ef;
 }
 .profilephoto{
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
+}
+.bodysectionprofile{
+  background: #343a40;
+}
+/*----- Membership section----*/
+.Membershipsection{
+  background: #cdd1d4;
+}
+/*------- latest news section----*/
+#latestNEws{
+	min-height:500px;
+	background:#234150;
+	position:relative;
+	margin-top:100px;
+
+}
+#latestNEws:before{
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0%;
+    width: 50%;
+    height: 90px;
+    transform: skewY(7deg);
+    background: #234150;
+	border-radius:10px 0 0 0;
+	z-index:-1;
+}
+#latestNEws:after{
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: 0%;
+    width: 50%;
+    height: 90px;
+    transform: skewY(-7deg);
+    background: #234150;
+	border-radius:0 0 10px 0;
+	z-index:-1;
+}
+.newsbox{
+    box-shadow: 5px 5px 5px #888888;
+	width:300px;
+	height:150px;
+	border:1px solid #fff;
+	margin-bottom:10px;
+	text-align:center;
+
+}
+.newsbox img{
+	width:300px;
+}
+.newsdescribe{
+	padding:20px;
+
+}
+#linkNews{
+	font-size:25px;
+	color:#fff !important;
 }

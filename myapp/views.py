@@ -1,14 +1,24 @@
-from django.shortcuts import render , redirect
+from django.shortcuts import render , get_object_or_404, redirect
 from .forms import RegistrationForm ,ProfileUpdateForm, UserUpdateForm
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from .models import Post
+from django.utils import timezone
 # Create your views here.
 def logout(request):
     return redirect('login')
 def tripura(request):
     return render(request, 'blog/home.html')
+def about(request):
+    return render(request, 'blog/about.html')
+def leadership(request):
+    return render(request, 'blog/leadership.html' )
+def Membership(request):
+    users = User.objects.all()
+    context = {'users':users}
 
+    return render(request, 'blog/Membership.html', context)
 def profile(request):
     arg = {'user': request.user }
     return render(request, 'blog/profile.html', arg)
@@ -51,3 +61,13 @@ def accoount_update(request):
     'u_form': u_form
     }
     return render(request, 'blog/account.html', context)
+#this is news section part........
+def News_list(request):
+    posts = Post.objects.filter(publish_date__lte=timezone.now()).order_by('-publish_date')
+    context = {'posts': posts}
+    return render(request, 'blog/news.html', context)
+
+def news_details(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    context = { 'posts':post }
+    return render (request, 'blog/news_details.html', context)

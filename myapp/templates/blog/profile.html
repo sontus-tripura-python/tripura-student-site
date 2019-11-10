@@ -1,38 +1,159 @@
 {% extends 'blog/base.html' %}
 
 {% block body %}
+
+<body class="bodysectionprofile">
+<div class="headersection">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav navbarNav">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'profile' %}">PROFILE <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'edit_profile' %}">EDIT PROFILE <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="">CREATE PROFILE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout'%}">LOGOUT</a>
+          </li>
+          <li class="nav-item dropdown">
+     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       YOUR ACCOUNT
+     </a>
+     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+       <a class="nav-link" href="{% url 'accoount_update' %}">UPDATE ACCOUNT</a>
+       <a class="dropdown-item" href="#">Another action</a>
+       <a class="dropdown-item" href="#">Something else here</a>
+     </div>
+   </li>
+
+        </ul>
+
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- table------>
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-8">
-      <img src="{{ request.user.profile.photo.url }}" alt="" class=" rounded-circle profilephoto">
-    <h4>{{ user.first_name }} <span class="lastname">{{ user.last_name }}</span> </h4>
-    <p>{{ user.profile.title }}</p>
-    <h4>Email : {{ user.email }}</h4>
-    <h4>Father Name : {{ user.profile.fathername }}</h4>
-    <h4>Mother Name : {{ user.profile.mothername }}</h4>
-    <h4>School : {{ user.profile.School}}</h4>
-    <h4>college : {{ user.profile.college }}</h4>
-    <h4> University : {{ user.profile.university }}</h4>
-      <h4>Deparment : {{ user.profile.deparment }}</h4>
-      <h4>Class : {{ user.profile.Class }}</h4>
-      <h4>Religion : {{ user.profile.religion }}</h4>
-      <h4>Village : {{ user.profile.Village }}</h4>
-      <h4>Live : {{ user.profile.current_city }}</h4>
-      <h4>City : {{ user.profile.local_city }}</h4>
-      <h4>Thana : {{ user.profile.thana }}</h4>
-      <h4>District : {{ user.profile.district }}</h4>
-      <h4>Phone : {{ user.profile.phone }}</h4>
-      <h4>Birthdate : {{ user.profile.birthdate }}</h4>
-        <div class="bio-data">
-          <p>Bio : {{ user.profile.bio_data }}</p>
-        </div>
-
-
-
-    </div>
 
   </div>
 </div>
 
 
+<div class="container">
+<div class="row justify-content-center">
+
+      <img src="{{ request.user.profile.photo.url }}" alt="" class="rounded-circle profilephoto">
+<div class="col-md-10">
+<table class="table table-bordered table-dark">
+  <tbody>
+            <tr>
+                  <th scope="row">Name</th>
+                  <td> {{ user.first_name }} <span class="lastname">{{ user.last_name }}</span></td>
+
+            </tr>
+
+              <tr>
+                    <th scope="row">Father Name</th>
+                    <td> {{ user.profile.fathername }}</td>
+
+              </tr>
+
+          	   <tr>
+                    <th scope="row">Mother Name</th>
+                    <td>{{ user.profile.mothername }}</td>
+
+              </tr>
+
+               <tr>
+                    <th scope="row">School</th>
+                    <td>{{ user.profile.School}}</td>
+
+              </tr>
+
+          	 <tr>
+                    <th scope="row">Colllege</th>
+                    <td>{{ user.profile.college }}</td>
+
+              </tr>
+
+          	 <tr>
+                    <th scope="row"> University</th>
+                    <td>{{ user.profile.university }}</td>
+
+              </tr>
+
+          	 <tr>
+                    <th scope="row">Department</th>
+                    <td>{{ user.profile.deparment }}</td>
+
+              </tr>
+
+          	 <tr>
+                    <th scope="row">Class</th>
+                    <td>{{ user.profile.Class }}</td>
+
+              </tr>
+
+          	 <tr>
+                    <th scope="row">Religion</th>
+                    <td>{{ user.profile.religion }}</td>
+
+              </tr>
+
+              <tr>
+                     <th scope="row">Birthday</th>
+                     <td> {{ user.profile.birthdate }}</td>
+
+               </tr>
+              <tr>
+                 <th scope="row">Phone</th>
+                 <td>{{ user.profile.phone }}</td>
+
+               </tr>
+          	 <tr>
+                <th scope="row">Village</th>
+                <td>{{ user.profile.Village }}</td>
+
+              </tr>
+          	 <tr>
+                <th scope="row">Thana</th>
+                <td>{{ user.profile.thana }}</td>
+
+              </tr>
+
+              <tr>
+                 <th scope="row">District</th>
+                 <td> {{ user.profile.district }}</td>
+
+               </tr>
+               <tr>
+                  <th scope="row">Local City</th>
+                  <td> {{ user.profile.local_city }}</td>
+
+                </tr>
+               <tr>
+                  <th scope="row">Current City</th>
+                  <td> {{ user.profile.current_city }}</td>
+
+                </tr>
+                <tr>
+                   <th scope="row">Bio</th>
+                   <td> {{ user.profile.bio_data|linebreaksbr }}</td>
+
+                 </tr>
+            </tbody>
+</table>
+</div>
+</div>
+</div>
+</body>
 {% endblock %}

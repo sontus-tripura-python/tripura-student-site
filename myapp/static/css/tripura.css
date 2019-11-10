@@ -21,7 +21,7 @@ body{
 	border-radius:50%;
 }
 .logotext{
-	
+
 	padding:10px 50px;
 }
 .logotext h2{
@@ -30,7 +30,7 @@ body{
     font-style: italic;
     color: #fff;
     padding-top: 15px;
-    
+
 }
 .logotext p{
 	color:#ddd;
@@ -40,7 +40,7 @@ body{
 	color:#51ff58;
 }
 .section-header {
-	
+
 	padding-top:50px;
     position: relative;
     margin-bottom: 50px;
@@ -53,7 +53,7 @@ body{
 	letter-spacing:2px;
     text-transform:uppercase;
 	font-family:font-family: 'Kumar One Outline', cursive !important;
-	
+
 }
 .title:after {
     content:"";
@@ -63,7 +63,7 @@ body{
   	background-color:#151b54;
     margin-top:10px;
 	border-radius:20px;
-	
+
 }
 
 .text-center .title:after {
@@ -76,13 +76,13 @@ body{
 	position:fixed;
 	right:0;
 	top:40%;
-	
+
 }
 .social-area li{
 	list-style:none;
-	
+
 }
-.fab {
+.icons {
  padding:10px;
   font-size: 30px;
   width: 50px;
@@ -90,7 +90,7 @@ body{
   text-decoration: none;
 }
 
-.fab:hover {
+.icons:hover {
     opacity: 0.7;
 }
 
@@ -129,21 +129,21 @@ body{
 	border-bottom:1px solid #1c1d1f;
 	z-index:999;
 }
-.navbar{
+.navbarcss{
 	background:#164a3b!important;
 }
 
-.navbar ul li{
+.navbarcss ul li{
 	padding-right:20px;
 	margin-right:10px;
 }
-.navbar ul li a{
+.navbarcss ul li a{
 	text-transform:uppercase;
 	letter-spacing:2px;
 	color:#fff !important;
 	transition:1s;
 }
-.navbar ul li a:hover{
+.navbarcss ul li a:hover{
 	color:green!important;
 	transition:1s;
 }
@@ -159,41 +159,7 @@ body{
   width: 100%;
 }
 
-/*------------ slider section 
-#slidersection{
-	position:relative;
-	min-height:500px;
-	background:#2ca095;
-}
-
-#slidersection:before{
-	content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -75px;
-    width: 50%;
-    height: 100px;
-    	 background:
- linear-gradient(to bottom, rgba(59,183,120,1) 0%,#3B5998 100%);
-    transform: skewY(-4deg);
-}
-#slidersection:after{
-	    content: "";
-    position: absolute;
-    right: 50%;
-    bottom: -75px;
-    width: 50%;
-    height: 100px;
-    	 background:
- linear-gradient(to bottom, rgba(59,183,120,1) 0%,#3B5998 100%);
-    
-    transform: skewY(4deg);
-}
-.sliderimg{
-	margin-top:20px;
-	width:100%;
-	height:200px;
-}
+/*------------ slider section
 ----------*/
 .carousel-indicators li{
 	width:10px;
@@ -206,7 +172,7 @@ body{
 	background:#2ca095;
 }
 .slider_img{
-	height:550px;
+	min-height:550px;
 }
 .carousel-inner{
 	height:600px;
@@ -244,7 +210,7 @@ body{
 	transition:2s;
 }
 .item a{
-	
+
 	text-decoration:none;
     color:#fff;
 }
@@ -292,12 +258,12 @@ body{
 	padding-top:50px;
 }
 .studentNumber{
-	
+
 	margin-top:20px;
 	width:100%;
 	height:2px;
 	background:#000;
-	
+
 }
 .class-section h3{
 	margin-top:10px;
@@ -309,57 +275,7 @@ body{
 	text-transform:uppercase;
 }
 /*----------- latest news section css*/
-#latestNEws{
-	min-height:500px;
-	background:#234150;
-	position:relative;
-	margin-top:100px;
-	
-}
-#latestNEws:before{
-    content: "";
-    position: absolute;
-    top: -40px;
-    left: 0%;
-    width: 50%;
-    height: 90px;
-    transform: skewY(7deg);
-    background: #234150;
-	border-radius:10px 0 0 0;
-	z-index:-1;
-}
-#latestNEws:after{
-    content: "";
-    position: absolute;
-    top: -40px;
-    right: 0%;
-    width: 50%;
-    height: 90px;
-    transform: skewY(-7deg);
-    background: #234150;
-	border-radius:0 0 10px 0;
-	z-index:-1;
-}
-.newsbox{
-    box-shadow: 5px 5px 5px #888888;
-	width:300px;
-	height:150px;
-	border:1px solid #fff;
-	margin-bottom:10px;
-	text-align:center;
-	
-}
-.newsbox img{
-	width:300px;
-}
-.newsdescribe{
-	padding:20px;
-	
-}
-#linkNews{
-	font-size:25px;
-	color:#fff !important;
-}
+
 /*---------- newsarchive-----*/
 #newsarchive{
 	background:#947f7f;
@@ -383,7 +299,7 @@ body{
 	color:#fff!important;
 	font-size:16px;
 	text-transform:uppercase;
-	
+
 }
 .copyright:hover{
 	color:red !important;
@@ -391,10 +307,10 @@ body{
 
 /*-------- form section------*/
 
- 
- 
- 
- 
+
+
+
+
 /*-------- contact section------*/
 .contactbg{
 	margin-top:20px;
@@ -424,7 +340,7 @@ body{
 	background:green !important;
 	transition:.5s;
 	border-radius:10px;
-	
+
 }
 #sendbtn:hover{
 	background:#fff !important;
@@ -434,7 +350,7 @@ body{
 #contactaddress{
 	background:#294830;
 	min-height:200px;
-}	
+}
 .address{
 	color:#fff;
 	text-align:center;
@@ -454,21 +370,18 @@ body{
 	padding:0;
 }
 /*---------- leadership -------*/
-#main-leader{
-		margin-top:20px;
-	
-}
-.teamBg{
-	padding:20px;
-	min-height:600px;
-	background:#20c997;
+
+/*-------- leader section------*/
+.teamsection{
+	background:#8c9298;
+	display:block;
 }
 .leaderTItle{
 	text-align:center;
 	margin:0;
 	padding-top:10px;
 	text-transform:uppercase;
-	
+
 }
 .subtitle{
 	text-align:center;
@@ -485,36 +398,91 @@ body{
 	width:120px;
 	margin:5px auto;
 }
-.team-items{
-	min-height:380px;
-	margin-right:10px;
-	padding:10px;
-	background:#e1e8ef;
-	border-radius:5px;
+.leadersection{
+	background:#edf4fd;
+	min-height:1200px;
 }
-.team-info{
-	color:#222;
-	font-size:20px;
+ .learderpics{
+	 	height:200px;
+	 width: 250px;
+	border-radius: 5px;
+ }
+ .profile-leader{
+	 overflow:hidden;
+	 float:left;
 	text-align:center;
-}
-.team-info h2,p{
-	margin:0;
-	padding:0;
-}
-.team-info p{
-	color:red;
-}
-.team-details{
-	background:green;
-}
-.social-icons{
-	align-items:center;
-}
-.social-icons li{
-	padding:0;
-	float:left;
-	list-style:none;
-	}
+	margin-right:8px;
+	 margin-top: 20px;
+	height:300px;
+	 width: 250px;
+	 border:2px solid #000;
+	border-radius: 5px;
+	background:#86d097;
+ }
+ .img-boxs{
+	 border-radius: 5px;
+	 opacity:1;
+	 display:block;
+	 position:relative;
+ }
+ .leader_name{
+	 font-size:22px;
+	 font-weight:bold;
+	 margin-top:15px;
+ }
+ .img-boxs:after{
+	 content:'';
+	 opacity:0;
+	 background-color:rgba(0,0,0,0.6);
+	 position:absolute;
+	 right:0;
+	 left:0;
+	 top:0;
+	 bottom:0;
+	 border-radius: 5px;
+	 }
 
-..class-sectio------- events section--------*/
-/*-------- footer section-------*/
+ .learder_posting{
+
+ }
+.learder-social{
+	margin:0;
+	padding:20px 0;
+	position:absolute;
+	z-index:1;
+	bottom:0;
+	display:block;
+	left:50%;
+	transform:translateX(-50%);
+	opacity:0;
+
+}
+.learder-social li{
+	width:30px;
+	height:30px;
+	border:1px solid #fff;
+	border-radius:50%;
+	margin:3px;
+	padding:7px;
+	display:inline-block;
+}
+.img-boxs:hover:after{
+	opacity:1;
+
+}
+.learder-social li a{
+	color:#fff;
+}
+.img-boxs:hover ul{
+	opacity:1;
+}
+.learder-social li a:hover{
+	color:#007bff;
+	border:1px solid #007bff;
+}
+.img-boxs:after, .leader-social, .leader-social li{
+	transition: all 0.5s ease-in-out 0s;
+}
+
+
+/*--------  section-------*/

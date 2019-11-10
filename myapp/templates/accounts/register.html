@@ -25,8 +25,22 @@
 
       </div>
       <div class="footerForm">
-      <p class="InfoWant">Have already account?</p>
-      <h4 style="text-align:center;"><a href="{% url 'login' %}">Sign In</a></h4>
+      <p class="InfoWant">connect with thes</p>
+      <h4 style="text-align:center;">
+
+        <a href="{% url 'social:begin' 'github' %}">
+         <button type="button" class="btn btn-primary">Github</button>
+        </a>
+        <a href="{% url 'social:begin' 'google-oauth2' %}">
+         <button type="button" class="btn btn-danger">Google+</button>
+        </a>
+        <a href="{% url 'social:begin' 'google-oauth2' %}">
+         <button type="button" class="btn btn-success">Facebook</button>
+        </a>
+      </h4>
+
+
+
       </div>
 
 

@@ -14,96 +14,20 @@
 <!------- all plugin css call------->
  <script src=" https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %} " />
+    <link rel="stylesheet" href="{% static 'css/tripura.css' %}" />
     <title>Sontus Tripura</title>
 </head>
 <body>
-  <div class="headersection">
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <span class="navbar-brand" href="#">Python blog</span>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          {% if user.is_authenticated %}
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'profile' %}">PROFILE <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'edit_profile' %}">EDIT PROFILE <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="">CREATE PROFILE</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'accoount_update' %}">UPDATE ACCOUNT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'logout'%}">LOGOUT</a>
-          </li>
-          <li class="nav-item dropdown">
-     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-       YOUR ACCOUNT
-     </a>
-     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-       <a class="dropdown-item" href="#">account</a>
-       <a class="dropdown-item" href="#">Another action</a>
-       <a class="dropdown-item" href="#">Something else here</a>
-     </div>
-   </li>
-          {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'login' %}"> LOGIN</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'register'%}">Register</a>
-          </li>
-          {% endif %}
-        </ul>
-
-      </div>
-    </nav>
-
-    </div>
-    </div>
-
-
 
     <div class="bodysection">
-    <div class="container">
 
        {% block body %}
 
 
        {% endblock%}
-      </div>
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="footersetion">
-  <div class="container">
-    <div class="text-center">
-     <h4>&copy 2019 DEVELOPED BY <a href="sontustrp.com" class="site-me">SONTUSTRP.COM</a></h4>
-       <a href="https://github.com/sontus-tripura-python"><i class="fab fa-github" id="linksocial"></i></a>
-       <a href="https://www.facebook.com/adnan.tripuraatit"><i class="fab fa-facebook-f" id="linksocial"></i></a>
-         <a href="#"><i class="fab fa-youtube" id="linksocial"></i></a>
-   </div>
-  </div>
-
-</div>
 
 
 
@@ -113,5 +37,30 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $(".team").owlCarousel({
+   items: 4,
+   margin:30,
+   responsive:{
+   991 : {
+   items :4
+   },
+   768:{
+   items:2
+   },
+   0:{
+   items:1
+   }
+
+   }
+
+  });
+});
+
+
+</script>
+
 </body>
 </html>

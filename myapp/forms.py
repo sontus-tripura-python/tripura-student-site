@@ -44,14 +44,18 @@ class ProfileUpdateForm(forms.ModelForm):
         'college',
         'university',
         'deparment',
-        'phone',
         'birthdate',
         'Village',
         'thana',
         'district',
         'current_city',
         'local_city',
-        'bio_data',
         'religion',
         'Class',
+        'phone',
+        'bio_data',
+
+
+
+
         ]

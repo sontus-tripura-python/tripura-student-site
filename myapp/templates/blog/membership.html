@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+
+{% block body %}
+<div class="Membershipsection">
+  <div class="container">
+       <p class="subtitle">Tripura Student's forum members's</p>
+    <div class="row justify-content-center">
+
+      <div class="col-md-8">
+        {% for user in users %}
+        <h2><a href="">{{ user.first_name }} <span class="lastname">{{ user.last_name }}</span></a></h2>
+       {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
