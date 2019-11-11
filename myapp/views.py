@@ -19,8 +19,13 @@ def Membership(request):
     context = {'users':users}
 
     return render(request, 'blog/Membership.html', context)
-def profile(request):
-    arg = {'user': request.user }
+
+def profile(request, pk=None):
+    if pk:
+        user = User.objects.get(pk=pk)
+    else:
+        user = request.user
+    arg = {'user': user }
     return render(request, 'blog/profile.html', arg)
 
 def register(request):

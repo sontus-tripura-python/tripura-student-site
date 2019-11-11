@@ -15,6 +15,7 @@ class profile(models.Model):
     mothername = models.CharField(max_length=50, blank=True)
     deparment = models.CharField(max_length=50, blank=True)
     phone = models.IntegerField()
+    current_work = models.CharField(max_length=100, blank=True)
     religion = models.CharField(max_length=20, blank=True)
     Class = models.CharField(max_length=10, blank=True)
     Village = models.CharField(max_length=150, blank=True)

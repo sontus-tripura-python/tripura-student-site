@@ -53,6 +53,7 @@ class ProfileUpdateForm(forms.ModelForm):
         'religion',
         'Class',
         'phone',
+        'current_work',
         'bio_data',
 
 

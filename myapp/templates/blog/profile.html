@@ -50,8 +50,9 @@
 
 <div class="container">
 <div class="row justify-content-center">
-
-      <img src="{{ request.user.profile.photo.url }}" alt="" class="rounded-circle profilephoto">
+   {% if user.profile.photo %}
+      <img src="{{ user.profile.photo.url }}" alt="" class="rounded-circle profilephoto">
+{% endif %}
 <div class="col-md-10">
 <table class="table table-bordered table-dark">
   <tbody>
@@ -119,7 +120,14 @@
                  <td>{{ user.profile.phone }}</td>
 
                </tr>
+               <tr>
+
+                   <th scope="row"> Current Work</th>
+                   <td>{{ user.profile.current_work }}</td>
+
+                 </tr>
           	 <tr>
+
                 <th scope="row">Village</th>
                 <td>{{ user.profile.Village }}</td>
 

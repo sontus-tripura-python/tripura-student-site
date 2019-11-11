@@ -122,6 +122,22 @@ label{
 .Membershipsection{
   background: #cdd1d4;
 }
+.profilepic{
+	height:100px;
+	width:100px;
+	margin-top:5px;
+}
+.name{
+	margin-top:15px;
+	padding-top:20px;
+	font-size:35px;
+	font-weight:bold;
+	padding-left: 8px;
+}
+.profilemember{
+	margin-top:15px;
+	padding-top:20px;
+}
 /*------- latest news section----*/
 #latestNEws{
 	min-height:500px;

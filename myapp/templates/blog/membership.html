@@ -8,8 +8,13 @@
 
       <div class="col-md-8">
         {% for user in users %}
-        <h2><a href="">{{ user.first_name }} <span class="lastname">{{ user.last_name }}</span></a></h2>
+        <div class="profilemember">
+           {% if user.profile.photo %}
+        <img src="{{ user.profile.photo.url }}" class="rounded-circle profilepic">
+        {% endif %}
+        <a href="{% url 'profile_with_pk' pk=user.pk %}"><span class="name"> {{ user.first_name }} <span class="lastname">{{ user.last_name }}</span></a>
        {% endfor %}
+      </div>
       </div>
     </div>
   </div>
