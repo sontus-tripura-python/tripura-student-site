@@ -1,19 +1,36 @@
 from django.shortcuts import render , get_object_or_404, redirect
-from .forms import RegistrationForm ,ProfileUpdateForm, UserUpdateForm
+from .forms import RegistrationForm ,ProfileUpdateForm, UserUpdateForm, ContactForm
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from .models import Post
+from .models import News , leadership
 from django.utils import timezone
+from django.conf import settings
+from django.core.mail import send_mail
 # Create your views here.
 def logout(request):
     return redirect('login')
+
 def tripura(request):
     return render(request, 'blog/home.html')
+
 def about(request):
     return render(request, 'blog/about.html')
-def leadership(request):
-    return render(request, 'blog/leadership.html' )
+
+def contact(request):
+    form = ContactForm(request.POST or None)
+    if form.is_valid():
+        name = form.cleaned_data['name']
+        message = form.cleaned_data['message']
+        subject = 'message form tsf.com'
+        message = '%s %s' %(message, name)
+        emailFrom = form.cleaned_data['email']
+        emailTo = [settings.EMAIL_HOST_USER]
+        send_mail(subject, message, emailFrom, emailTo, fail_silently=True)
+    context = { 'form': form }
+    return render(request, 'contacts/contact.html', context)
+
+
 def Membership(request):
     users = User.objects.all()
     context = {'users':users}
@@ -68,11 +85,16 @@ def accoount_update(request):
     return render(request, 'blog/account.html', context)
 #this is news section part........
 def News_list(request):
-    posts = Post.objects.filter(publish_date__lte=timezone.now()).order_by('-publish_date')
+    posts = News.objects.filter(publish_date__lte=timezone.now()).order_by('-publish_date')
     context = {'posts': posts}
     return render(request, 'blog/news.html', context)
 
 def news_details(request, pk):
-    post = get_object_or_404(Post, pk=pk)
+    post = get_object_or_404(News, pk=pk)
     context = { 'posts':post }
     return render (request, 'blog/news_details.html', context)
+
+def leader_list(request):
+    leaders = leadership.objects.all()
+    stuff_for_fontend = {'leaders': leaders }
+    return render(request, 'blog/leadership.html', stuff_for_fontend)

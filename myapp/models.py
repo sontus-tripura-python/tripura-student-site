@@ -14,7 +14,7 @@ class profile(models.Model):
     fathername = models.CharField(max_length=50, blank=True)
     mothername = models.CharField(max_length=50, blank=True)
     deparment = models.CharField(max_length=50, blank=True)
-    phone = models.IntegerField()
+    phone = models.IntegerField(default=0)
     current_work = models.CharField(max_length=100, blank=True)
     religion = models.CharField(max_length=20, blank=True)
     Class = models.CharField(max_length=10, blank=True)
@@ -30,7 +30,7 @@ class profile(models.Model):
         return self.user.username
 
 
-class Post(models.Model):
+class News(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=500)
     text = models.TextField()

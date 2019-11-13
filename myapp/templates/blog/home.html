@@ -42,7 +42,7 @@
         <a class="nav-link" href="{% url 'about' %}">about us</a>
       </li>
 	   <li class="nav-item">
-        <a class="nav-link" href="{% url 'leadership' %}">leadership</a>
+        <a class="nav-link" href="{% url 'leader_list' %}">leadership</a>
       </li>
 	   <li class="nav-item">
         <a class="nav-link" href="{% url 'News_list' %}">news</a>
@@ -120,7 +120,7 @@
 		<div class="col-md-4 col-sm-6">
 		<div class="service">
 		<div class="item">
-		<a href="">Contact</a>
+		<a href="{% url 'contact' %}">Contact</a>
 		</div>
 		</div>
 		</div>

@@ -1,26 +1,25 @@
 {% extends 'blog/base.html' %}
-{% block body %}
-<section id="latestNEws">
-<div class="container">
-<div class="section-header text-center">
-			<h2 class="title" style="margin-top:10px; color:#fff;">latest News</h2>
-		</div>
-<div class="row">
-  {% for post in posts %}
-  <div class="col-md-4">
-    <p>Published: {{ post.publish_date }} </p>
-  <div class="newsbox">
+{% load staticfiles %}
+{% block  body %}
+<div class="Membershipsection">
+  <div class="container">
+       <p class="subtitle">Tripura Student's forum, BANGLADESH</p>
+    <div class="row justify-content-center">
 
-  <img src="" alt="picture" />
-  </div>
+      <div class="col-md-8">
+				{% for post in posts %}
 
-  <div class="newsdescribe">
-  <h5><a href="{% url 'news_details' pk=post.pk %}" class="titleLink">{{ post.title }}</a></h5>
+				<p>Published: {{ post.publish_date }}</p>
+				  <img src="{% static 'img/school.jpg' %}" class="img-responsive news_img">
+					<h2><a href="{% url 'news_details' pk=post.pk %}" class="titleLink">{{ post.title }}</a></h2>
+					<div class="">
+						<a href="#" class="btn btn-success">Like</a>
+							<a href="#" class="btn btn-success">Comment</a>
+							<a href="#" class="btn btn-success">Share</a>
+					</div>
+				{% endfor %}
+      </div>
+    </div>
   </div>
-  </div>
-  {% endfor %}
-
 </div>
-</div>
-</section>
 {% endblock %}

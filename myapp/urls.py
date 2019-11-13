@@ -9,7 +9,8 @@ urlpatterns = [
     path('accoount/edit/', views.accoount_update, name='accoount_update'),
     path('news/', views.News_list, name='News_list'),
     path('news/<int:pk>/', views.news_details, name='news_details'),
-    path('leader/', views.leadership, name='leadership'),
+    path('leader/', views.leader_list, name='leader_list'),
     path('members/', views.Membership , name='Membership'),
+    path('contact/', views.contact, name='contact'),
     #path('members/<int:>/', views.view_profile, name='view_profile'),
     ]
