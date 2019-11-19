@@ -12,18 +12,20 @@
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
+
         {% for user in users %}
-        <div class="profilemember">
+          <div class="profilemember">
            {% if user.profile.photo %}
         <img src="{{ user.profile.photo.url }}" class="rounded-circle profilepic">
         {% endif %}
         <a href="{% url 'profile_with_pk' pk=user.pk %}"><span class="name"> {{ user.first_name }} <span class="lastname">{{ user.last_name }}</span></a>
+
+
        {% endfor %}
-      </div>
+       </div>
       </div>
     </div>
   </div>
-</div>
 
 
 

@@ -3,7 +3,7 @@ from .forms import RegistrationForm ,ProfileUpdateForm, UserUpdateForm, ContactF
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from .models import News , leadership
+from .models import Profile, News , leadership, about
 from django.utils import timezone
 from django.conf import settings
 from django.core.mail import send_mail
@@ -14,8 +14,10 @@ def logout(request):
 def tripura(request):
     return render(request, 'blog/home.html')
 
-def about(request):
-    return render(request, 'blog/about.html')
+def about_list(request):
+    abouts = about.objects.all()
+    stuff_for_fontend = {'abouts': abouts }
+    return render(request, 'blog/about.html', stuff_for_fontend)
 
 def contact(request):
     form = ContactForm(request.POST or None)
@@ -27,6 +29,8 @@ def contact(request):
         emailFrom = form.cleaned_data['email']
         emailTo = [settings.EMAIL_HOST_USER]
         send_mail(subject, message, emailFrom, emailTo, fail_silently=True)
+        confirm_message = "thanks for the message. we wil get right back to you"
+        context = {'confirm_message': confirm_message }
     context = { 'form': form }
     return render(request, 'contacts/contact.html', context)
 
@@ -50,6 +54,7 @@ def register(request):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
+
             return redirect('login')
     else:
        form = RegistrationForm()
@@ -98,3 +103,8 @@ def leader_list(request):
     leaders = leadership.objects.all()
     stuff_for_fontend = {'leaders': leaders }
     return render(request, 'blog/leadership.html', stuff_for_fontend)
+
+def leader_details(request, pk):
+    leader = get_object_or_404(leadership, pk=pk)
+    context = { 'leaders': leader }
+    return render (request, 'blog/leaderdeatails.html', context)

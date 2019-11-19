@@ -8,23 +8,22 @@
 <div class="row justify-content-center">
 
 <div class="col-md-8">
-<img src="img/pic1.jpg" class="img-responsive learderpics">
-<h2>Sontus Tripura</h2>
-<h4>Python developer</h4>
-<p>
-It is a long established fact that a reader will be distracted by the readable
-content of a page when looking at its layout. The point of using Lorem Ipsum is that
- it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'
- , making it look like readable English. Many desktop publishing packages and web page editors now use
- Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
- uncover many web sites still in their infancy.
-Various versions have evolved over the years, sometimes
+	<img src="{{ leaders.image.url }}" class="img-responsive leaderdetailspic">
+  <div class="social-icon">
+    <h3>Follow</h3>
+    <h2>fb : {{ leaders.facebook}}</h2>
+    <h2>tw : {{ leaders.twitter}}</h2>
+    <h2>insta : {{ leaders.instagram}}</h2>
+    <a href=""><i class="fab fa-facebook-f fbcolor"></i></a>
+    <a href="{{ leader.twitter}}"><i class="fab fa-twitter twittercolor"></i></a>
+    <a href="{{ leader.instagram}}"><i class="fab fa-instagram instagramcolor"></i></a>
+  </div>
+<h2>{{ leaders.name }}</h2>
+<h4>{{ leaders.title }}</h4>
 
+<p>{{ leaders.text }} </p>
 
-
-</p>
 </div>
-
 </div>
 
 </div>

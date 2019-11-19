@@ -5,8 +5,15 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
     <p>Published: {{ posts.publish_date }} </p>
-  <img src="{% static 'img/school.jpg' %}" class="img-responsive news_img">
+    {% if posts.image %}
+  <img src="{{ posts.image.url }}" class="img-responsive news_img">
+  {% endif %}
     <p>{{ posts.text }}</p>
+    <div class="">
+      <a href="#" class="btn btn-success">Like</a>
+        <a href="#" class="btn btn-success">Comment</a>
+        <a href="#" class="btn btn-success">Share</a>
+    </div>
     </div>
   </div>
 </div>

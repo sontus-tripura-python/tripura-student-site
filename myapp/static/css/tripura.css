@@ -329,6 +329,11 @@ body{
 	background:#edf4fd;
 	min-height:1200px;
 }
+.leaderdetailspic{
+  height:430px;
+ width: 500px;
+border-radius: 5px;
+}
  .learderpics{
 	 	height:200px;
 	 width: 250px;
@@ -414,6 +419,6 @@ body{
 
 /*--------  news section section-------*/
 .news_img{
-  height: 300px;
+  height: 350px;
   width: 100%;
 }

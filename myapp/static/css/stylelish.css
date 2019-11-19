@@ -138,3 +138,42 @@ label{
 	margin-top:15px;
 	padding-top:20px;
 }
+/*------- social icon color------*/
+.social-icon{
+  padding: 10px;
+}
+.instagramcolor{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  align-items: center;
+  padding: 11px;
+  font-size: 30px;
+  background:#E4405F;
+  color: white;
+}
+.linkIN {
+  background: #007bb5;
+  color: white;
+}
+.twittercolor {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  align-items: center;
+  padding: 12px;
+  font-size: 30px;
+  background: #55ACEE;
+  color: white;
+}
+.fbcolor {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  align-items: center;
+  padding: 14px;
+  font-size: 30px;
+  background: #3B5998;
+
+  color: white;
+}

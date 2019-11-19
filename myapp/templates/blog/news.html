@@ -10,7 +10,9 @@
 				{% for post in posts %}
 
 				<p>Published: {{ post.publish_date }}</p>
-				  <img src="{% static 'img/school.jpg' %}" class="img-responsive news_img">
+        {% if post.image %}
+				  <img src="{{ post.image.url  }}" class="img-responsive news_img">
+          {% endif %}
 					<h2><a href="{% url 'news_details' pk=post.pk %}" class="titleLink">{{ post.title }}</a></h2>
 					<div class="">
 						<a href="#" class="btn btn-success">Like</a>

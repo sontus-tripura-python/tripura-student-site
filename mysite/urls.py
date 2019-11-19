@@ -19,9 +19,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path,include
 from myapp import views as user_views
+from myapp import views as contact_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', user_views.register, name='register'),
+    path('contact/', contact_views.contact, name='contact'),
     #path('profile/', user_views.createprofile, name='createprofile'),
     path('login/',auth_views.LoginView.as_view(template_name='accounts/login.html'), name='login'),
     path('logout/',auth_views.LogoutView.as_view(template_name='accounts/logout.html'), name='logout'),
