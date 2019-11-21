@@ -26,8 +26,9 @@
 </div>
 </div>
 </section>
+
 <section id="navbarsection">
-<nav class="navbar navbar-expand-lg navbar-dark navbarcss">
+<nav class="navbar navbar-expand-lg navbar-dark navheader">
 <div class="container">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -36,7 +37,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'tripura' %}">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'about_list' %}">about us</a>
@@ -51,10 +52,6 @@
         <a class="nav-link" href="#">Vedio</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
 </section>
@@ -82,7 +79,7 @@
         <img src="{% static 'img/sontus1.jpg' %}" class="d-block w-100 slider_img" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>Third slide label</h5>
-          <p>Praesent commodo cursus magn, vel scelerisque nisl consectetur.</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
         </div>
       </div>
     </div>
@@ -97,6 +94,7 @@
   </div>
 </div>
 </section>
+
 
 <!-- profile section ---------------->
 <section id="divsecton">
@@ -168,76 +166,15 @@
 </div>
 </div>
 </section>
-<!-- latest news section------>
-
-<!-- footer section--------->
-
-<section id="footersection">
-
-<div class="container">
-<div class="row">
-<div class="col-md-4">
-<div class="rightfooter">
-<h2 class="text-center">Our adresses</h2>
-<ul>
-<li><a href="">Home</a></li>
-<li><a href="">Home</a></li>
-<li><a href="">Home</a></li>
-<li><a href="">Home</a></li>
-
-
-</ul>
-</div>
-</div>
-<div class="col-md-4">
-<div class="rightfooter">
-<h2 class="text-center">Our adresses</h2>
-<ul>
-<li><a href="">Home</a></li>
-<li><a href="">Home</a></li>
-<li><a href="">Home</a></li>
-<li><a href="">Home</a></li>
-
-
-</ul>
-</div>
-</div>
-<div class="col-md-4">
-<div class="rightfooter">
-<h2 class="text-center">Our adresses</h2>
-<ul>
-<li><a href="">Home</a></li>
-<li><a href="">Home</a></li>
-<li><a href="">Home</a></li>
-<li><a href="">Home</a></li>
-
-
-</ul>
-</div>
-</div>
-
-
-
-
-
-</div>
-<div class="text-center">
-<a href="" class="copyright">&copy Developed by sontustrp.com</a>
-</div>
-</div>
-
+<!-- footer news section------>
+<section class="footer">
+  <div class="container text-center">
+    <p class="footercopyright">&copy 2019 all Developed by <a href="#">Sontustrp.com</a></p>
+  </div>
 </section>
+
     <!------- javascript,jquery call--------->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-   <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-
- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
 <script>
-
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("navbarsection");
@@ -250,5 +187,8 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+
+
+
 </script>
  {% endblock %}

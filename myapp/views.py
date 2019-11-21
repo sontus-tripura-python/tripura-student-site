@@ -3,7 +3,7 @@ from .forms import RegistrationForm ,ProfileUpdateForm, UserUpdateForm, ContactF
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from .models import Profile, News , leadership, about
+from .models import Profile, News , leadership, about,SubLeader
 from django.utils import timezone
 from django.conf import settings
 from django.core.mail import send_mail
@@ -108,3 +108,14 @@ def leader_details(request, pk):
     leader = get_object_or_404(leadership, pk=pk)
     context = { 'leaders': leader }
     return render (request, 'blog/leaderdeatails.html', context)
+
+
+def subleader_list(request):
+    subleaders = SubLeader.objects.all()
+    stuff_for_fontend = {'subleaders': subleaders }
+    return render(request, 'blog/subleader.html', stuff_for_fontend)
+
+def subleader_details(request, pk):
+    subleader = get_object_or_404(SubLeader, pk=pk)
+    context = { 'subleaders': subleader }
+    return render (request, 'blog/sub_leader_deatails.html', context)

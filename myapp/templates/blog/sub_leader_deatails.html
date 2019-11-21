@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% block body %}
+<div class="leadersection">
+<div class="container">
+ <h2 class="leaderTItle">Leader's</h2>
+ <p class="subtitle">TSf central committee</p>
+<div class="row justify-content-center">
+
+<div class="col-md-8">
+	<img src="{{ subleaders.image.url }}" class="img-responsive leaderdetailspic">
+  <div class="social-icon">
+    <a href="{{ subleaders.facebook}}"><i class="fab fa-facebook-f fbcolor"></i></a>
+    <a href="{{ subleaders.twitter}}"><i class="fab fa-twitter twittercolor"></i></a>
+    <a href="{{ subleaders.instagram}}"><i class="fab fa-instagram instagramcolor"></i></a>
+  </div>
+<h2>{{ subleaders.name }}</h2>
+<h4>{{ subleaders.title }}</h4>
+
+<p>{{ subleaders.text }} </p>
+
+</div>
+</div>
+
+</div>
+</div>
+{% endblock %}

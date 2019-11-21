@@ -129,36 +129,29 @@ body{
 	border-bottom:1px solid #1c1d1f;
 	z-index:999;
 }
-.navbarcss{
+.navheader{
 	background:#164a3b!important;
 }
 
-.navbarcss ul li{
+.navheader ul li{
 	padding-right:20px;
 	margin-right:10px;
 }
-.navbarcss ul li a{
+.navheader ul li a{
 	text-transform:uppercase;
 	letter-spacing:2px;
 	color:#fff !important;
 	transition:1s;
 }
-.navbarcss ul li a:hover{
+.navheader ul li a:hover{
 	color:green!important;
 	transition:1s;
-}
-.dropdown-menu{
-	background:#202542!important;
-}
-.dropdown-menu a{
-	background:#202542!important;
 }
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
 }
-
 /*------------ slider section--*/
 .carousel-indicators li{
 	width:10px;
@@ -272,31 +265,22 @@ body{
 	color:#000;
 	text-transform:uppercase;
 }
-/*----------- latest news section css*/
+
 /*--------- footer section----------*/
-#footersection{
-	margin-top:10px;
-	background:#000;
-	min-height:300px;
+.footer{
+  margin-top: 10px;
+  background: #000;
+  min-height: 100px;
 }
-
-.rightfooter{
-	color:#fff;
-	padding:20px 10px;
+.footercopyright{
+  text-transform: capitalize;
+  font-size: 25px;
+  font-weight: bold;
+  color:#fff;
+  margin-top:10px;
+  padding-top: 50px;
 }
-.rightfooter ul li{
-	list-style:none;
-}
-.copyright{
-	color:#fff!important;
-	font-size:16px;
-	text-transform:uppercase;
-
-}
-.copyright:hover{
-	color:red !important;
-}
-/*---------- leadership -------*/
+/*---------- leadership tamplates-------*/
 
 /*-------- leader section------*/
 .teamsection{
@@ -309,6 +293,12 @@ body{
 	padding-top:10px;
 	text-transform:uppercase;
 
+}
+.logotsf{
+  margin-top:10px;
+	height:100px;
+	width:100px;
+	border-radius:50%;
 }
 .subtitle{
 	text-align:center;
@@ -410,7 +400,6 @@ border-radius: 5px;
 }
 .learder-social li a:hover{
 	color:#007bff;
-	border:1px solid #007bff;
 }
 .img-boxs:after, .leader-social, .leader-social li{
 	transition: all 0.5s ease-in-out 0s;

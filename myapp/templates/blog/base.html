@@ -29,9 +29,7 @@
 
 
 
-
-
-
+ <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
  <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -40,24 +38,12 @@
 
 <script>
 $(document).ready(function(){
-  $(".team").owlCarousel({
-   items: 4,
-   margin:30,
-   responsive:{
-   991 : {
-   items :4
-   },
-   768:{
-   items:2
-   },
-   0:{
-   items:1
-   }
+            $('.counterNum').counterUp({
+                delay: 10,
+                time: 2000
+            });
+        });
 
-   }
-
-  });
-});
 
 
 </script>

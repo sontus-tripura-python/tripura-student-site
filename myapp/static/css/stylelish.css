@@ -8,34 +8,6 @@
 a:hover{
   text-decoration: none;
 }
-.headersection{
-  background: #133861;
-}
-.navbarNav li a{
-	text-transform:uppercase;
-	color:#fff !important;
-}
-.dropdown{
-  background: #133861;
-}
-.edit-option{
-	margin-left:80px;
-}
-.footersetion{
-  background: #133861;
-}
-.text-center{
-  padding: 10px;
-  color:#fff;
-}
-.site-me{
-  font-size: 18px;
-  font-style: italic;
-  color: #41c32b!important;
-}
-.text-center a{
-  padding-right: 10px;
-}
 /*--------- login template-----*/
 .form-wrapper{
 	background:#fff;
@@ -43,6 +15,7 @@ a:hover{
   font-family: Raleway;
   box-shadow:2px 3px 2px #000;
 }
+
 label{
 	margin-top:5px;
 	font-size:20px;
@@ -65,6 +38,8 @@ label{
 	min-height:50px;
 }
 .logoLEft{
+  font-style: italic;
+  font-weight: bold;
 	letter-spacing:2px;
 	text-transform:uppercase;
 	text-align:center;
@@ -104,23 +79,52 @@ label{
   box-shadow:2px 3px 2px #000;
 }
 /*-------- profile------*/
-.bio-data{
-  min-width: 300px;
-  padding: 5px;
-  min-height:200px;
-  border: 1px solid #000;
-  background: #e7e7ef;
+.information-group{
+  background: #fbfbfb;
+  padding: 10px;
 }
+.profile_section{
+
+}
+.name-section{
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+.nameheading{
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 5px;
+  padding: 5px;
+}
+.information_section{
+  font-size: 18px;
+  margin-left: 5px;
+  text-transform: capitalize;
+  font-weight: lighter;
+  font-style: italic;
+}
+.looks{
+  padding: 10px;
+}
+
 .profilephoto{
   height: 300px;
   width: 300px;
 }
 .bodysectionprofile{
-  background: #d4e3f3;
+  background: #fbfbfb;
+}
+.profilenavbar{
+  margin-left: 50px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000 !important;
+  font-weight: bold;
 }
 /*----- Membership section----*/
 .Membershipsection{
-  background: #cdd1d4;
+  background: #fbfbfb;
 }
 .profilepic{
 	height:100px;
@@ -130,6 +134,7 @@ label{
 .name{
 	margin-top:15px;
 	padding-top:20px;
+  text-transform: capitalize;
 	font-size:35px;
 	font-weight:bold;
 	padding-left: 8px;

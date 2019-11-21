@@ -1,29 +1,29 @@
 {% extends 'blog/base.html' %}
 {% load crispy_forms_tags %}
-
+{% load staticfiles %}
 
 
 {% block body %}
 
 <div class="container">
+  <div class="text-center">
+    <img class="logotsf " src="{% static 'img/tsf.jpg' %}" alt="" />
+  </div>
   <div class="row justify-content-center">
     <div class="col-md-8">
-      <div class="form-wrapper">
-      <div class="headerform">
-      <h4 class="logoLEft">Tirpura Student's Forum</h4>
-      </div>
-      <div class="ligIn-interface">
+      <h4 class="logoLEft">Tripura Student's Forum,BANGLADESH</h4>
+
+
 
           <form class="form-group" method="post">
-            <div class="formstylye">
+
             {% csrf_token  %}
             {{ form|crispy }}
-              </div>
+
             <button type="btn btn-success" class="SubmitBtn" Name="submit" value="Submit">SUBMIT</button>
           </form>
 
 
-      </div>
       <div class="footerForm">
       <p class="InfoWant">connect with thes</p>
       <h4 style="text-align:center;">
@@ -49,12 +49,6 @@
     </div>
 
   </div>
-
-
-
-
-</div>
-
 
 
 

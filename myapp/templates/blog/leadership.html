@@ -1,26 +1,35 @@
- {% extends 'blog/base.html' %}
+{% extends 'blog/base.html' %}
 {% load staticfiles %}
 {% block body %}
 <div class="leadersection">
-<div class="container">
- <h2 class="leaderTItle">Leader's</h2>
- <p class="subtitle">TSf central committee</p>
- {% for leader in leaders %}
-			<div class="profile-leader">
+<div class="container text-center">
 
-	<div class="img-boxs">
-		<img src="{{ leader.image.url }}" class="img-responsive learderpics">
-	<ul class="learder-social">
-	<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-	<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-	<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+  <div class="">
+    <img class="logotsf " src="{% static 'img/tsf.jpg' %}" alt="" />
+  </div>
+<h4 class="leaderTItle">Leader's</h4>
+<p class="subtitle">TSf central committee</p>
+<div class="">
+  <a href="{% url 'leader_list' %}" class="btn btn-success">Central Leader</a>
+  <a href="{% url 'subleader_list' %}" class="btn btn-primary">Sub Leader</a>
+</div>
 
-	</ul>
-	</div>
+{% for leader in leaders %}
+     <div class="profile-leader">
+
+ <div class="img-boxs">
+   <img src="{{ leader.image.url }}" class="img-responsive learderpics">
+ <ul class="learder-social">
+ <li><a href="{{leader.facebook }}"><i class="fab fa-facebook-f"></i></a></li>
+ <li><a href="{{ leader.twitter}}"><i class="fab fa-twitter"></i></a></li>
+ <li><a href="{{ leader.instagram }}"><i class="fab fa-instagram"></i></a></li>
+
+ </ul>
+ </div>
 <h2 class="leader_name"><a href="{% url 'leader_details' pk=leader.pk %}">{{ leader.name }}</a></h2>
-	<h4 class="learder_posting">{{ leader.title }}</h4>
-	</div>
-  {% endfor %}
+ <h4 class="learder_posting">{{ leader.title }}</h4>
+ </div>
+ {% endfor %}
 </div>
 </div>
 

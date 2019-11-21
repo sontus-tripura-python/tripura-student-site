@@ -32,6 +32,8 @@ class ProfileUpdateForm(forms.ModelForm):
         'mothername',
         'School',
         'birthday',
+        'gender',
+        'status',
         'college',
         'university',
         'deparment',

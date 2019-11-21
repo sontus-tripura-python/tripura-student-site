@@ -11,6 +11,8 @@ class Profile(models.Model):
     School = models.CharField(max_length=100, blank=True)
     college = models.CharField(max_length=100, blank=True)
     title = models.CharField(max_length=150, blank=True)
+    gender = models.CharField(max_length=20, default="Male", choices=(("Male", "Male"), ("Female", "Female")))
+    status = models.CharField(max_length=30, default="Single", choices=(("Single", "Single"), ("Married", "Married"), ("In a Relationship","In a Relationship")))
     fathername = models.CharField(max_length=50, blank=True)
     mothername = models.CharField(max_length=50, blank=True)
     deparment = models.CharField(max_length=50, blank=True)
@@ -22,7 +24,7 @@ class Profile(models.Model):
     district = models.CharField(max_length=100, blank=True)
     current_city = models.CharField(max_length=100, blank=True)
     local_city = models.CharField(max_length=100, blank=True)
-    birthday = models.DateField(auto_now=False, null=True, blank=True)
+    birthday = models.DateField(null=True, blank=True)
     bio_data = models.TextField(blank=True)
     def __str__(self):
         return self.user.username
